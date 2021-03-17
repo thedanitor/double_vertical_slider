@@ -31,6 +31,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
+  transition: transform 0.5s ease-in-out;
 }
 
 .left-slide > div {
@@ -41,14 +42,14 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
   color: #fff;
 }
 
 .left-slide h1 {
   font-size: 40px;
-  margin-bottom: 10px;
   /* negative margin-top will move upwards vertically */
-  margin-top: -30px;
+  margin: -30px 10px 10px;
 }
 
 /* RIGHT SLIDE  */
@@ -60,6 +61,7 @@ body {
   top: 0;
   /* start 35% from left (where left-slide ends) */
   left: 35%;
+  transition: transform 0.5s ease-in-out;
 }
 
 .right-slide > div {
