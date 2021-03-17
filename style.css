@@ -1,22 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 * {
-    /* width not affected by padding or border */
-    box-sizing: border-box;
+  /* width not affected by padding or border */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: "Roboto", sans-serif;
-    display: flex;
-    flex-direction: column;
-    /* Centered horizontally */
-    align-items: center; 
-    /* Centered vertically on 100% viewport */
-    justify-content: center;
-    /* 100% viewport height  */
-    height: 100vh;
-    /* don't want scrollbars  */
-    overflow: hidden;
-    /* no margins  */
-    margin: 0;
+  font-family: "Open Sans", sans-serif;
+  /* 100% viewport height  */
+  height: 100vh;
+}
+
+/* SLIDER CONTAINER  */
+
+.slider-container {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* LEFT SLIDE */
+
+.left-slide {
+  /* percentage of container */
+  height: 100%;
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.left-slide > div {
+  /* percentage of container */
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.left-slide h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  /* negative margin-top will move upwards vertically */
+  margin-top: -30px;
+}
+
+/* RIGHT SLIDE  */
+
+.right-slide {
+  height: 100%;
+  width: 65%;
+  position: absolute;
+  top: 0;
+  /* start 35% from left (where left-slide ends) */
+  left: 35%;
+}
+
+.right-slide > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+
+/* BUTTONS */
+
+button {
+    background-color: #fff;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 15px;
+}
+
+button:hover {
+    color: #222;
+}
+
+button:focus {
+    outline: none;
+    background-color: #ddd;
+    color: #222;
+}
+
+.slider-container .action-buttons button {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 100;
+}
+
+.slider-container .action-buttons .down-button {
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.slider-container .action-buttons .up-button {
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }

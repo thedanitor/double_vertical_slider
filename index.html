@@ -4,13 +4,74 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- font awesome stylesheet if needed -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" /> -->
+    <!-- font awesome stylesheet -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>Double Vertical Slider</title>
   </head>
   <body>
-    <h1>Project Starter</h1>
+    <div class="slider-container">
+      <div class="left-slide">
+        <!-- First -->
+        <div style="background-color: #fd3555">
+          <h1>Ocean at Sunset</h1>
+          <p>7 Bridges Road, Little Egg Harbor Township, United States</p>
+        </div>
+        <!-- Second -->
+        <div style="background-color: blue">
+          <h1>Orcas between Icebergs</h1>
+          <p>McMurdo Station, Antarctica</p>
+        </div>
+        <!-- Third -->
+        <div style="background-color: green">
+          <h1>Bird on a Branch</h1>
+          <p>Dehradun, India</p>
+        </div>
+        <!-- Fourth -->
+        <div style="background-color: yellow">
+          <h1>Springbok in the Desert</h1>
+          <p>Dubai - United Arab Emirates</p>
+        </div>
+      </div>
+      <div class="right-slide">
+        <!-- Fourth -->
+        <div
+          style="
+            background-image: url('https://source.unsplash.com/rJ9VyGnaNyM/1920x1303');
+          "
+        ></div>
+        <!-- Third -->
+        <div
+          style="
+            background-image: url('https://source.unsplash.com/UrmJg5gV2Bg/1920x1279');
+          "
+        ></div>
+        <!-- Second -->
+        <div
+          style="
+            background-image: url('https://source.unsplash.com/wT-dwxXCsE8/1920x1439');
+          "
+        ></div>
+        <!-- First -->
+        <div
+          style="
+            background-image: url('https://source.unsplash.com/x6W7uXDbe_E/1920x1280');
+          "
+        ></div>
+      </div>
+      <div class="action-buttons">
+        <button class="down-button">
+          <i class="fas fa-arrow-down"></i>
+        </button>
+        <button class="up-button">
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </div>
+    <!-- <img src="https://source.unsplash.com/x6W7uXDbe_E/2000x1000"> -->
     <script src="script.js"></script>
   </body>
 </html>
